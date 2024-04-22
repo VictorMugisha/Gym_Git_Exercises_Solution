@@ -92,7 +92,7 @@ Everything up-to-date
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
 
-## Bundle 1 - Exercise 2: Adding, Stashing and Unstashing files
+### Bundle 1 - Exercise 2: Adding, Stashing and Unstashing files
 ```bash
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
