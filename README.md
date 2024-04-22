@@ -1,5 +1,7 @@
 # GIT EXERCISES
-## Exercise 1 - Bundle 1
+
+## Bundle 1
+### Bundle 1 - Exercise 1: Creating and deleting branches 
 
 ```bash
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git init
@@ -21,11 +23,6 @@ No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 
-C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
-```
-#### After commiting the creation of README.md file and adding remote repository
-
-```bash
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
 On branch main
 
@@ -95,7 +92,7 @@ Everything up-to-date
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
 
-#### After stashing and unstashing files
+## Bundle 1 - Exercise 2: Adding, Stashing and Unstashing files
 ```bash
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
