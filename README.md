@@ -181,3 +181,46 @@ HEAD is now at 6d33625 Currect stashing state with only team.html stashed
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
+
+## Bundle 2
+
+### Bundle 2 - Exercise 1
+
+```bash
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git commit -m 
+[main 7c464df] Finished with bundle 1
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout -
+Switched to a new branch 'ft/bundle2'
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git branch -m ft/bundle-2
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)     
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git add services.html
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git commit -m "Adding 
+services.html page"
+[ft/bundle-2 e328a70] Adding services.html page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 482 bytes | 482.00 KiB/s, done. 
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/ft/bundle-2
+remote: 
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
+```
