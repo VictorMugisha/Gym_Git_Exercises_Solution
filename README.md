@@ -224,3 +224,127 @@ To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
+
+### Bundle 2 - Exercise 2
+```bash
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 923 bytes | 230.00 KiB/s, done.
+From https://github.com/VictorMugisha/Gym_Git_Exercises_Solution
+   7c464df..4563deb  main       -> origin/main
+Updating 7c464df..4563deb
+Fast-forward
+ README.md     | 43 +++++++++++++++++++++++++++++++++++++++++++
+ services.html | 14 ++++++++++++++
+ 2 files changed, 57 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git add --all
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git commit -m "Modifying services.html from ft/service-redesign branch"
+[ft/service-redesign e70b7fa] Modifying services.html from ft/service-redesign branch
+ 1 file changed, 2 insertions(+)
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 394 bytes | 197.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/ft/service-redesign
+remote:
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git add services.html
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git commit -m "Modifying services page from main branch"
+[main 3400197] Modifying services page from main branch
+ 1 file changed, 2 insertions(+)
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 393 bytes | 393.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   4563deb..3400197  main -> main
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git diff main
+diff --git a/services.html b/services.html
+index 28a9b03..cf81dbc 100644
+--- a/services.html
++++ b/services.html
+@@ -10,7 +10,7 @@
+     <h1>Services Page</h1>
+     <p>This is the content of services page!</p>
+
+-    <h2>This is from main branch and we have old services!</h2>
++    <h2>We are introducing new services to clients</h2>
+
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git merge ft/service-redesign
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git add --all
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git commit -m "Merge ft/service-redesign into main"
+[main faf70de] Merge ft/service-redesign into main
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises> git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 443 bytes | 221.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   3400197..faf70de  main -> main
+PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
+```
