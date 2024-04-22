@@ -351,7 +351,7 @@ PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 
 ## Bundle 3
 
-### Bundle 3 - Exercise 1
+### Bundle 3 - Exercise 1 
 ```bash
 git checkout ft/team-page
 Already on 'ft/team-page'
