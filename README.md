@@ -519,3 +519,76 @@ To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
+
+
+### Bundle 3 - Exercise 2
+
+```bash
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add --all
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Made changes to main branch"
+[main 0c1a7d5] Made changes to main branch
+ 2 files changed, 1 insertion(+), 7 deletions(-)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 425 bytes | 425.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   01915e0..0c1a7d5  main -> main
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add home.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Add changes to home page"
+[ft/home-page-redesign 8c5e034] Add changes to home page
+ 1 file changed, 2 insertions(+)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 372.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+```
