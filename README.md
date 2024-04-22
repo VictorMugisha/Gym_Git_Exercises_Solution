@@ -23,7 +23,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
-### After commiting the creation of README.md file and adding remote repository
+#### After commiting the creation of README.md file and adding remote repository
 
 ```bash
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
@@ -58,6 +58,39 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
+```
+
+##### After creating `dev` branch and creating and removing `test` branch
+```bash
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b dev
+Switched to a new branch 'dev'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch dev
+nothing to commit, working tree clean
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/dev
+remote:
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      dev -> dev
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b test
+Switched to a new branch 'test'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git switch dev
+Switched to branch 'dev'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git branch -d test
+Deleted branch test (was f4858cc).
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin dev
+Everything up-to-date
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
