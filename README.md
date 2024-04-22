@@ -23,3 +23,41 @@ nothing to commit (create/copy files and use "git add" to track)
 
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
+### After commiting the creation of README.md file and adding remote repository
+
+```bash
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add README.md
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Initial commit after creating README.md file"
+[main (root-commit) 66412a2] Initial commit after creating README.md file
+ 1 file changed, 25 insertions(+)
+ create mode 100644 README.md
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git remote add origin https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git branch -M main
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 500 bytes | 250.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
+```
