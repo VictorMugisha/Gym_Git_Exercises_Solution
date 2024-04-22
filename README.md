@@ -164,5 +164,23 @@ Unmerged paths:
 no changes added to commit (use "git add" and/or "git commit -a")
 The stash entry is kept in case you need it again.
 
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git stash pop stash@{0}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped stash@{0} (1cc923897cfb5a407a54c9339c1fb1a1ce16e729)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git reset --hard
+HEAD is now at 6d33625 Currect stashing state with only team.html stashed
+
 C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
