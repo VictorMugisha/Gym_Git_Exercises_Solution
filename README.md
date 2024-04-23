@@ -348,3 +348,292 @@ To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
    3400197..faf70de  main -> main
 PS C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
 ```
+
+## Bundle 3
+
+### Bundle 3 - Exercise 1 
+```bash
+git checkout ft/team-page
+Already on 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add --all
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Creating team page"
+[ft/team-page 21b9140] Creating team page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 459.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   765742a..21b9140  ft/team-page -> ft/team-page
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b  ft/contact-page
+fatal: a branch named 'ft/contact-page' already exists
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git branch -d ft/contact-page
+Deleted branch ft/contact-page (was 4e9fa2e).
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m ""
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin main
+Everything up-to-date
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git branch -d ft/contact-page
+error: branch 'ft/contact-page' not found
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b  ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git log
+commit 21b9140c4ca6a81ca885c2fbc9660b4ea6c5829c (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Victor Mugisha Shyaka <victormugishavm6@gmail.com>
+Date:   Mon Apr 22 19:32:10 2024 +0200
+
+    Creating team page
+
+commit 765742a634bca5d1b1c9c0e39b2aa29677c00882
+Author: Victor Mugisha Shyaka <victormugishavm6@gmail.com>
+Date:   Mon Apr 22 18:15:59 2024 +0200
+
+    Done.
+
+commit b8a5f3c7d40c500de58ed810b53b81f50a2d2803
+Author: Victor Mugisha Shyaka <victormugishavm6@gmail.com>
+Date:   Mon Apr 22 17:57:15 2024 +0200
+
+    Adding content to contact page while cherry-picking commit
+
+commit 35c8748c4e55da90274ac34f1ca31b079e663784
+Author: Victor Mugisha Shyaka <victormugishavm6@gmail.com>
+Date:   Mon Apr 22 17:57:15 2024 +0200
+
+    Created team page in ft/team branch
+
+commit 4e9fa2e3006ef606acf80e2051e2e8da238c1af0 (origin/main, main, ft/contact-page)
+Author: Victor Mugisha Shyaka <victormugishavm6@gmail.com>
+Date:   Mon Apr 22 17:51:15 2024 +0200
+
+    Completed with Bundle 2 - Exercise 2
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git cherry-pick 21b9140c4ca6a81ca885c2fbc9660b4ea6c5829c
+[ft/contact-page 4e96a16] Creating team page
+ Date: Mon Apr 22 19:32:10 2024 +0200
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add contact.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Updating contact with cherry-pick"
+[ft/contact-page d1e0230] Updating contact with cherry-pick
+ 1 file changed, 14 insertions(+)
+ create mode 100644 contact.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 784 bytes | 392.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/ft/contact-page
+remote:
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add faq.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Added faq.html"
+[ft/faq-page 3ebd540] Added faq.html
+ 1 file changed, 13 insertions(+)
+ create mode 100644 faq.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/faq-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    team.html
+
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Reverted to commit"
+[ft/faq-page 0992296] Reverted to commit
+ 1 file changed, 14 deletions(-)
+ delete mode 100644 team.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 236 bytes | 236.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   852d73a..0992296  ft/faq-page -> ft/faq-page
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>
+```
+
+
+### Bundle 3 - Exercise 2
+
+```bash
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add --all
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Made changes to main branch"
+[main 0c1a7d5] Made changes to main branch
+ 2 files changed, 1 insertion(+), 7 deletions(-)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 425 bytes | 425.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   01915e0..0c1a7d5  main -> main
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add home.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "Add changes to home page"
+[ft/home-page-redesign 8c5e034] Add changes to home page
+ 1 file changed, 2 insertions(+)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 372.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/VictorMugisha/Gym_Git_Exercises_Solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+```
+
+## Bundle 4
+
+### Bundle 4 - Exercise 1 : Terminal History After creating second repo and pushing new changes
+```bash
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git remote add git-copy https://github.com/VictorMugisha/git-copy.git
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git remote -v
+git-copy        https://github.com/VictorMugisha/git-copy.git (fetch)
+git-copy        https://github.com/VictorMugisha/git-copy.git (push)
+origin  https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git (fetch)
+origin  https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git (push)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git add home.html
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git commit -m "After changing home content and creating git-copy repo"
+[main 1023454] After changing home content and creating git-copy repo
+ 1 file changed, 2 insertions(+)
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/VictorMugisha/Gym_Git_Exercises_Solution.git
+   e8cc05b..1023454  main -> main
+
+C:\Users\victo\OneDrive\Documents\TheGym_Git_Exercises>git push git-copy main
+Enumerating objects: 81, done.
+Counting objects: 100% (81/81), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (78/78), done.
+Writing objects: 100% (81/81), 12.50 KiB | 673.00 KiB/s, done.
+Total 81 (delta 41), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (41/41), done.
+To https://github.com/VictorMugisha/git-copy.git
+ * [new branch]      main -> main
+```
